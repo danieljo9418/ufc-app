@@ -5,16 +5,16 @@ import pandas as pd
 from tensorflow import keras
 from load import *
 
-global model 
+# global model 
 
-model = init()
+# model = init()
 
 # Use pickle to load in the pre-trained model.
 # with open(f'tf_model3/saved_model.pb', 'rb') as f:
 #     model = keras.models.load_model(f)
 
-# with open(f'model/model.json', 'r') as f:
-#     model = json.load(f)
+with open(f'model/model.json', 'r') as f:
+    model = json.load(f)
 
 app = flask.Flask(__name__, template_folder='templates')
 # def index_view():
