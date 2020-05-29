@@ -38,7 +38,7 @@ def main():
 
         input_variables = pd.DataFrame([[BPrev, BStreak, B_Age,B_Height,B_Weight,RPrev, RStreak, R_Age,R_Height,R_Weight]],
                                        columns=['BPrev','BStreak','B_Age','B_Height','B_Weight','RPrev','RStreak','R_Age','R_Height','R_Weight'],
-                                       dtype=float)
+                                       dtype=float,
                                        index=['input'])
         prediction = model.predict(input_variables)[0]
         return flask.render_template('main.html',
